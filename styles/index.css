@@ -5,7 +5,7 @@ body {
 }
 
 hr.dashed {
-    border-top: 1px dashed #bbb;
+    border-top: 2px dashed #e8e8e8;
     margin-top: 10px;
     margin-bottom: 10px;
 }
