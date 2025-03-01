@@ -9,3 +9,8 @@ hr.dashed {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+
+.item-complete:disabled {
+    background-color: #cddaff;
+    color: white;
+}

@@ -16,6 +16,9 @@ function completeTask(id, itemID) {
         document.getElementById('assigned-task-count').innerText = assignedTaskCount;
         document.getElementById('total-completed-task-count').innerText = totalCompletedTaskCount;
 
+        //date function
+        const curTime = getCurrentTime();
+
         //target layout
         const targetLayout = document.getElementById(itemID).childNodes;
         const taskTitle = targetLayout[5].innerText;
@@ -27,7 +30,7 @@ function completeTask(id, itemID) {
         child.innerHTML =
             `
             <p class="bg-base-color p-3 my-3 rounded-md text-sm">
-                You have Complete The Task ${taskTitle} at 12:48:15 PM
+                You have Complete The Task ${taskTitle} at ${curTime}
             </p>
         `;
         //parent << child
