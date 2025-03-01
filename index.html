@@ -48,16 +48,16 @@
     <!---------->
     <!--Header-->
     <!---------->
-    <header class="navbar container shadow-md mx-auto p-4 rounded-xl relative top-4 mb-8 bg-white">
+    <header class="navbar container shadow-md mx-auto p-4 md:rounded-xl md:relative md:top-4 mb-8 bg-white">
 
         <!-------->
         <!--left-->
         <!-------->
         <div class="navbar-start space-x-4">
-            <img class="w-[36px]" src="./assets/logo.png" alt="">
+            <img class="w-[28px] md:w-[36px]" src="./assets/logo.png" alt="">
 
             <!--site logo-->
-            <a class="text-2xl flex">
+            <a class="text-lg md:text-2xl flex">
                 Dev <span class="font-bold">Board</span>
             </a>
         </div>
@@ -70,11 +70,11 @@
         <div class="navbar-end space-x-4">
 
             <div class="bg-base-color flex items-center space-x-4 px-4 py-2 rounded-3xl">
-                <img src="./assets/checkbox.png" alt="">
-                <span id="total-completed-task-count" class="text-2xl font-bold">23</span>
+                <img class="w-[20px] md:w-[28px]" src="./assets/checkbox.png" alt="">
+                <span id="total-completed-task-count" class="text-base md:text-2xl font-bold">23</span>
             </div>
 
-            <img id="dyn-bg" class="w-12 h-12 bg-base-color rounded-full p-2 zoom-effect" src="./assets/theme-btn.png" alt="">
+            <img id="dyn-bg" class="w-10 md:w-12 h-10 md:h-12 bg-base-color rounded-full p-2 zoom-effect" src="./assets/theme-btn.png" alt="">
         </div>
 
     </header>
@@ -92,17 +92,17 @@
     <!---------->
     <!-- Main -->
     <!---------->
-    <main class="navbar container mx-auto grid grid-cols-4 gap-8 p-0">
+    <main class="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-8 p-0">
 
         <!------------------>
         <!-- (main board) -->
         <!------------------>
-        <section class="w-full col-span-3 shadow-md mx-auto p-4 rounded-xl bg-white flex flex-col">
+        <section class="w-full md:col-span-3 shadow-md mx-auto p-4 rounded-xl bg-white flex flex-col">
 
             <!--       -->
             <!--heading-->
             <!--       -->
-            <div class="w-full grid grid-cols-4 gap-4">
+            <div class="w-full grid grid-cols-1 md:grid-cols-4 gap-2 md:gap-4">
 
                 <!--task assigned-->
                 <div class="w-full bg-base-color rounded-xl p-4 flex items-center justify-center space-x-4">
@@ -150,10 +150,10 @@
             <!--         -->
             <!--task list-->
             <!--         -->
-            <div class="w-full grid grid-cols-3 gap-6">
+            <div class="w-full grid grid-cols-1 md:grid-cols-3 gap-6">
 
                 <!--task item (1)-->
-                <div id="item-1" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-1" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">ShopEase</span>
@@ -177,7 +177,7 @@
                 </div>
 
                 <!--task item (2)-->
-                <div id="item-2" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-2" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">CloudSync</span>
@@ -201,7 +201,7 @@
                 </div>
 
                 <!--task item (3)-->
-                <div id="item-3" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-3" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">SwiftPay</span>
@@ -225,7 +225,7 @@
                 </div>
 
                 <!--task item (4)-->
-                <div id="item-4" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-4" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">Meta</span>
@@ -249,7 +249,7 @@
                 </div>
 
                 <!--task item (5)-->
-                <div id="item-5" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-5" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">Google LLC</span>
@@ -273,7 +273,7 @@
                 </div>
 
                 <!--task item (6)-->
-                <div id="item-6" class="bg-base-color p-6 space-y-4 rounded-xl">
+                <div id="item-6" class="bg-base-color p-6 space-y-4 rounded-xl shadow-md md:shadow-none">
 
                     <!--upper part-->
                     <span class="bg-white rounded-md px-3 py-2 text-sm">GlassDoor</span>
@@ -314,7 +314,7 @@
         <!-------------------->
         <!-- (Activity Log) -->
         <!-------------------->
-        <section class="w-full h-full shadow-md mx-auto p-4 rounded-xl bg-white flex flex-col">
+        <section class="w-full h-full shadow-md mx-auto p-4 rounded-xl bg-white flex flex-col items-center">
 
             <!--       -->
             <!--heading-->
@@ -326,7 +326,7 @@
                     <h1>Activity Log</h1>
                 </div>
 
-                <button id="clear-history" class="btn bg-primary-color text-white">Clear History</button>
+                <button id="clear-history" class="btn bg-primary-color text-white w-fit">Clear History</button>
             </div>
 
 

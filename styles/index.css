@@ -6,8 +6,8 @@ body {
 
 hr.dashed {
     border-top: 2px dashed #e8e8e8;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 .item-complete:disabled {
