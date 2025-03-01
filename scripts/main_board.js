@@ -61,3 +61,12 @@ for (let i = 0; i < paraList.length; i++) {
 function truncateText(text, maxLength = 60) {
     return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }
+
+
+
+//------------------//
+//  goto blog page  //
+//------------------//
+document.getElementById('discover').addEventListener('click', function(){
+    window.location.href = './blogs.html';
+});

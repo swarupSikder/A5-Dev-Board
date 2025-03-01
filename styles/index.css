@@ -14,3 +14,13 @@ hr.dashed {
     background-color: #cddaff;
     color: white;
 }
+
+.zoom-effect {
+    transition: all 0.3s ease-in-out;
+}
+
+.zoom-effect:hover {
+    cursor: pointer;
+    position: relative;
+    scale: 105%;
+}
