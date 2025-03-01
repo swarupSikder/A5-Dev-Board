@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board</title>
+
+    <!--Google font links-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!--FontAwesome link-->
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css'>
+
+    <!--Daisy UI + Tailwind CSS (start)-->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                        'primary-color': '#3752FD',
+                        'base-color': '#F4F7FF',
+                    },
+                    fontFamily: {
+                        'poppins': ['Poppins', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <!--Tailwind CSS (end)-->
+
+    <!--Raw CSS-->
+    <link rel="stylesheet" href="./styles/index.css">
+
+</head>
+
+<body class="font-poppins bg-base-color">
+
+    <!---------->
+    <!--Header-->
+    <!---------->
+    <header class="navbar container shadow-md mx-auto p-4 rounded-xl relative top-4 mb-8 bg-white">
+
+        <!-------->
+        <!--left-->
+        <!-------->
+        <div class="navbar-start space-x-4">
+            <img class="w-[36px]" src="./assets/logo.png" alt="">
+
+            <!--site logo-->
+            <a class="text-2xl flex">
+                Dev <span class="font-bold">Board</span>
+            </a>
+        </div>
+
+
+
+        <!--------->
+        <!--right-->
+        <!--------->
+        <div class="navbar-end space-x-4">
+
+            <div class="bg-base-color flex items-center space-x-4 px-4 py-2 rounded-3xl">
+                <img src="./assets/checkbox.png" alt="">
+                <span id="total-completed-task-count" class="text-2xl font-bold">23</span>
+            </div>
+
+            <img id="dyn-bg" class="w-12 h-12 bg-base-color rounded-full p-2" src="./assets/theme-btn.png" alt="">
+        </div>
+
+    </header>
+
+
+
+
+
+
+
+
+
+
+
+    <!---------->
+    <!-- Main -->
+    <!---------->
+    <main class="container mx-auto p-0">
+
+        <!--------------------->
+        <!-- (title section) -->
+        <!--------------------->
+        <section class="mt-12">
+            <h1 class="text-3xl font-bold text-center">Blogs</h1>
+        </section>
+
+
+
+
+
+
+
+        <!---------------------->
+        <!-- (blog-container) -->
+        <!---------------------->
+        <section class="py-4">
+
+            <!--item (1)-->
+            <div class="card bg-white shadow-md my-6">
+
+                <h2 class="p-6 font-bold">Question-1: What are the different ways to select an element in the DOM?</h2>
+
+                <hr class="my-0">
+
+                <p class="p-6">In JavaScript, there are multiple ways to select elements from the DOM. Such as - getElementById, getElementsByClassName, getElementsByTagName, getElementsByName, querySelector, querySelectorAll etc.</p>
+
+            </div>
+
+            <!--item (2)-->
+            <div class="card bg-white shadow-md my-6">
+
+                <h2 class="p-6 font-bold">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+
+                <hr class="my-0">
+
+                <p class="p-6">innerHtml: Returns or sets the HTML content of an element, including nested HTML tags. innerText: Returns or sets the visible text of an element. textContent: Returns or sets all text inside an element, including hidden text.</p>
+
+            </div>
+
+            <!--item (3)-->
+            <div class="card bg-white shadow-md my-6">
+
+                <h2 class="p-6 font-bold">Question-3: What is event delegation in the DOM?</h2>
+
+                <hr class="my-0">
+
+                <p class="p-6">Event delegation in JavaScript is a method where a single event listener is assigned to a parent element rather than adding multiple listeners to each child element. This approach leverages event bubbling, allowing events triggered on child elements to propagate up the DOM hierarchy to their ancestors.</p>
+
+            </div>
+
+            <!--item (4)-->
+            <div class="card bg-white shadow-md my-6">
+
+                <h2 class="p-6 font-bold">Question-4: What is event bubbling in the DOM?</h2>
+
+                <hr class="my-0">
+
+                <p class="p-6">Event bubbling is a process in the DOM where an event that occurs on a child element first runs its associated event handlers and then moves upward through its parent elements, eventually reaching the root.</p>
+
+            </div>
+
+            <!--item (5)-->
+            <div class="card bg-white shadow-md my-6">
+
+                <h2 class="p-6 font-bold">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+
+                <hr class="my-0">
+
+                <p class="p-6">To create new element we use like document.createElement('div'). To add elements to the DOM, we use like appendChild('p'). To remove elements from the DOM we simply use remove(). </p>
+
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+
+
+
+
+
+
+
+
+    <!---------->
+    <!--footer-->
+    <!---------->
+    <footer></footer>
+
+
+    <!--scripts-->
+    <script src="./scripts/main_board.js"></script>
+    <script src="./scripts/activity_log.js"></script>
+    <script src="./scripts/dynamic_background.js"></script>
+    <script src="./scripts/current_date_time.js"></script>
+
+</body>
+
+</html>
