@@ -16,6 +16,10 @@ function completeTask(id, itemID) {
         document.getElementById('assigned-task-count').innerText = assignedTaskCount;
         document.getElementById('total-completed-task-count').innerText = totalCompletedTaskCount;
 
+        //target layout
+        const targetLayout = document.getElementById(itemID).childNodes;
+        const taskTitle = targetLayout[5].innerText;
+
         //parent
         const parent = document.getElementById('activity-container');
         //child
@@ -23,11 +27,21 @@ function completeTask(id, itemID) {
         child.innerHTML =
         `
             <p class="bg-base-color p-3 my-3 rounded-md text-sm">
-                You have Complete The Task Add Dark Mode at 12:48:15 PM
+                You have Complete The Task ${taskTitle} at 12:48:15 PM
             </p>
         `;
         //parent << child
         parent.appendChild(child);
         this.disabled = true;
+
+        //---------------//
+        //  build alert  //
+        //---------------//
+        if(assignedTaskCount == 0){
+            alert('congrates!! You have completed all the current task');
+        }
+        else{
+            alert('Board updated Successfully');
+        }
     });
 }
