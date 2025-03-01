@@ -11,6 +11,14 @@ completeTask('c6', 'item-6');
 function completeTask(id, itemID) {
     document.getElementById(id).addEventListener('click', function (event) {
         event.preventDefault();
+        //---------------//
+        //  first alert  //
+        //---------------//
+        alert('Board updated Successfully');
+
+
+
+        //main task
         assignedTaskCount--;
         totalCompletedTaskCount++;
         document.getElementById('assigned-task-count').innerText = assignedTaskCount;
@@ -37,14 +45,11 @@ function completeTask(id, itemID) {
         parent.appendChild(child);
         this.disabled = true;
 
-        //---------------//
-        //  build alert  //
-        //---------------//
+        //----------------//
+        //  second alert  //
+        //----------------//
         if (assignedTaskCount == 0) {
-            alert('congrates!! You have completed all the current task');
-        }
-        else {
-            alert('Board updated Successfully');
+            alert('Congrats!! You have completed all the current task');
         }
     });
 }
