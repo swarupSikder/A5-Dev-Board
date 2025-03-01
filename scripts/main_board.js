@@ -25,7 +25,7 @@ function completeTask(id, itemID) {
         //child
         const child = document.createElement('div');
         child.innerHTML =
-        `
+            `
             <p class="bg-base-color p-3 my-3 rounded-md text-sm">
                 You have Complete The Task ${taskTitle} at 12:48:15 PM
             </p>
@@ -37,11 +37,24 @@ function completeTask(id, itemID) {
         //---------------//
         //  build alert  //
         //---------------//
-        if(assignedTaskCount == 0){
+        if (assignedTaskCount == 0) {
             alert('congrates!! You have completed all the current task');
         }
-        else{
+        else {
             alert('Board updated Successfully');
         }
     });
+}
+
+
+//--------------------//
+//  ch limit in task  //
+//--------------------//
+const paraList = document.getElementsByClassName('task-details');
+for (let i = 0; i < paraList.length; i++) {
+    paraList[i].innerText = truncateText(paraList[i].innerText);
+}
+
+function truncateText(text, maxLength = 60) {
+    return text.length > maxLength ? text.slice(0, maxLength) + "..." : text;
 }

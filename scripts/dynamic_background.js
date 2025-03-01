@@ -3,7 +3,7 @@ let i = 0;
 
 document.getElementById('dyn-bg').addEventListener('click', function(){
     //main task (bg change)
-    console.log(backgroundList[i]);
+    //console.log(backgroundList[i]);
     document.body.style.backgroundColor = backgroundList[i];
 
     //increment
